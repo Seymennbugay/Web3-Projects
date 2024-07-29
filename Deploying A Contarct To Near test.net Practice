@@ -1,0 +1,171 @@
+PS C:\Users\kamer> npm install -g yarn@1.22.15
+
+changed 1 package, and audited 2 packages in 1s
+
+found 0 vulnerabilities
+PS C:\Users\kamer> npm install -g near-cli
+npm WARN deprecated base-x@2.0.6: use 3.0.0 instead, safe-buffer has been merged and release for compatability
+npm WARN deprecated @ledgerhq/hw-transport-u2f@5.36.0-deprecated: @ledgerhq/hw-transport-u2f is deprecated. Please use @ledgerhq/hw-transport-webusb or @ledgerhq/hw-transport-webhid. https://github.com/LedgerHQ/ledgerjs/blob/master/docs/migrate_webusb.md
+
+changed 240 packages, and audited 241 packages in 24s
+
+30 packages are looking for funding
+  run `npm fund` for details
+
+4 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\Users\kamer> git clone https://github.com/Learn-NEAR/starter--near-sdk-as
+>>
+Cloning into 'starter--near-sdk-as'...
+remote: Enumerating objects: 56, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 56 (delta 21), reused 7 (delta 7), pack-reused 18R
+Receiving objects: 100% (56/56), 25.17 KiB | 429.00 KiB/s, done.
+Resolving deltas: 100% (21/21), done.
+PS C:\Users\kamer> cd starter--near-sdk-as
+>>
+PS C:\Users\kamer\starter--near-sdk-as> yarn
+>>
+yarn install v1.22.15
+warning ..\package.json: No license field
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+warning Your current version of Yarn is out of date. The latest version is "1.22.22", while you're on "1.22.15".
+info To upgrade, run the following command:
+$ curl --compressed -o- -L https://yarnpkg.com/install.sh | bash
+Done in 1.12s.
+PS C:\Users\kamer\starter--near-sdk-as> yarn build:release
+>>
+yarn run v1.22.15
+warning ..\package.json: No license field
+$ asb
+Done in 9.25s.
+PS C:\Users\kamer\starter--near-sdk-as> near dev-deploy ./build/release/singleton.wasm
+>>
+
+This command has been deprecated
+Please use: near create-account <accId> --useFaucet to create a pre-funded account, and then near deploy to deploy the contract
+
+PS C:\Users\kamer\starter--near-sdk-as> near create-account <seymenbugay.testnet> --useFaucet 
+At line:1 char:21
++ near create-account <seymenbugay.testnet> --useFaucet
++                     ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\kamer\starter--near-sdk-as> near create-account <seymenbugay> --useFaucet 
+At line:1 char:21
++ near create-account <seymenbugay> --useFaucet
++                     ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\kamer\starter--near-sdk-as> near dev-deploy ./build/release/singleton.wasm
+
+This command has been deprecated
+Please use: near create-account <accId> --useFaucet to create a pre-funded account, and then near deploy to deploy the contract
+
+PS C:\Users\kamer\starter--near-sdk-as> ^C
+PS C:\Users\kamer\starter--near-sdk-as> ^C
+PS C:\Users\kamer\starter--near-sdk-as> near create-account <seymenbugay.testnet> --useFaucet 
+At line:1 char:21
++ near create-account <seymenbugay.testnet> --useFaucet
++                     ~
+The '<' operator is reserved for future use.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : RedirectionNotSupported
+
+PS C:\Users\kamer\starter--near-sdk-as> near dev-deploy ./build/release/singleton.wasm
+
+This command has been deprecated
+Please use: near create-account <accId> --useFaucet to create a pre-funded account, and then near deploy to deploy the contract
+
+PS C:\Users\kamer\starter--near-sdk-as> near login
+>>
+
+Please authorize NEAR CLI on at least one of your accounts.
+
+If your browser doesn't automatically open, please visit this URL
+https://testnet.mynearwallet.com/login/?referrer=NEAR+CLI&public_key=ed25519%3AHAYJdYEFyH1atqhMRk8WAd8zyME39LDbkixDMpq2KQWi
+Please authorize at least one account at the URL above.
+
+Which account did you authorize for use with NEAR CLI?
+Enter it here:
+seymenbugay.testnet
+Logged in as [ seymenbugay.testnet ] with public key [ ed25519:HAYJdY... ] successfully
+
+PS C:\Users\kamer\starter--near-sdk-as> near deploy --accountId seymenbugay.testnet --wasmFile ./build/release/singleton.wasm
+>>
+near deploy <account-id> <wasm-file>
+
+Deploy a contract to an existing account (optionally initializing it)
+
+Options:
+      --help          Show help  [boolean]
+      --version       Show version number  [boolean]
+  -v, --verbose       Prints out verbose output  [boolean] [default: false]
+      --wasmFile      Path to wasm file to deploy  [string] [required]
+      --initFunction  Initialization method  [string]
+      --initArgs      Initialization arguments
+      --initGas       Gas for initialization call (default: 30TGAS)  [number] [default: "1b48eb57e000"]
+      --initDeposit   Deposit in Ⓝ to send for initialization call (default: 0)  [string] [default: "0"]
+      --networkId     Which network to use. Supports: mainnet, testnet, custom  [string] [default: "testnet"]
+      --force         Forcefully deploy the contract  [boolean] [default: false]
+
+Not enough non-option arguments: got 0, need at least 2
+PS C:\Users\kamer\starter--near-sdk-as> ^C
+PS C:\Users\kamer\starter--near-sdk-as> near deploy --accountId seymenbugay.testnet --wasmFile ./build/release/singleton.wasm
+>>
+near deploy <account-id> <wasm-file>
+
+Deploy a contract to an existing account (optionally initializing it)
+
+Options:
+      --help          Show help  [boolean]
+      --version       Show version number  [boolean]
+  -v, --verbose       Prints out verbose output  [boolean] [default: false]
+      --wasmFile      Path to wasm file to deploy  [string] [required]
+      --initFunction  Initialization method  [string]
+      --initArgs      Initialization arguments
+      --initGas       Gas for initialization call (default: 30TGAS)  [number] [default: "1b48eb57e000"]
+      --initDeposit   Deposit in Ⓝ to send for initialization call (default: 0)  [string] [default: "0"]
+      --networkId     Which network to use. Supports: mainnet, testnet, custom  [string] [default: "testnet"]
+      --force         Forcefully deploy the contract  [boolean] [default: false]
+
+Not enough non-option arguments: got 0, need at least 2
+PS C:\Users\kamer\starter--near-sdk-as> near deploy --accountId seymenbugay.testnet --wasmFile ./build/release/singleton.wasm
+>>
+near deploy <account-id> <wasm-file>
+
+Deploy a contract to an existing account (optionally initializing it)
+
+Options:
+      --help          Show help  [boolean]
+      --version       Show version number  [boolean]
+  -v, --verbose       Prints out verbose output  [boolean] [default: false]
+      --wasmFile      Path to wasm file to deploy  [string] [required]
+      --initFunction  Initialization method  [string]
+      --initArgs      Initialization arguments
+      --initGas       Gas for initialization call (default: 30TGAS)  [number] [default: "1b48eb57e000"]
+      --initDeposit   Deposit in Ⓝ to send for initialization call (default: 0)  [string] [default: "0"]
+      --networkId     Which network to use. Supports: mainnet, testnet, custom  [string] [default: "testnet"]
+      --force         Forcefully deploy the contract  [boolean] [default: false]
+
+Not enough non-option arguments: got 0, git clone https://github.com/Learn-NEAR/starter--near-sdk-as
+>> C:\Users\kamer\starter--near-sdk-as>
+Cloning into 'starter--near-sdk-as'...
+remote: Enumerating objects: 56, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 56 (delta 21), reused 7 (delta 7), pack-reused 18
+Receiving objects: 100% (56/56), 25.17 KiB | 429.00 KiB/s, done.
+Resolving deltas: 100% (21/21), done.
